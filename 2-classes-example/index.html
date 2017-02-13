@@ -1,0 +1,18 @@
+<!doctype html>
+<html>
+  <script src="classes_example.js"></script>
+  <script>
+	console.log('From classes-example: ');
+	var instance = new Module.MyClass(10, "hello");
+	console.log(instance);
+	instance.incrementX();
+	console.log(instance.x);
+	instance.x; 
+	console.log(instance.x);
+	instance.x = 20; 
+	console.log(instance.x);
+	var string = Module.MyClass.getStringFromInstance(instance);
+	console.log(string);
+	instance.delete();
+  </script>
+</html>
