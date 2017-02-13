@@ -87,6 +87,8 @@
      </script>
    </html>
    ```
+   
+   * Therefore there is no way for Emscripten to automatically call the destructors on C++ objects. So JavaScript code must explicitly delete any C++ object handles it has received, or the Emscripten heap will grow indefinitely. That's why I call **instance.delete()**.
 
  * In console, the result should be:
  
