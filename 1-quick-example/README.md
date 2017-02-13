@@ -52,7 +52,7 @@
     </script>
   </html>
   ```
- * "<script src="quick_example.js"></script>" is to load javascript file (quick_example.js)
+ * ```<script src="quick_example.js"></script>``` is to load javascript file (quick_example.js)
  * Notice: Always access objects through the Module object, as shown above.
 
  * In console, the result should be:
