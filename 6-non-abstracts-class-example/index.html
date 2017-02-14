@@ -1,0 +1,29 @@
+<!doctype html>
+<html>
+  <script src="non_abstract_class.js"></script>
+  
+  <script>
+	console.log('From non-abstract.js');
+	
+	var WrapperClass = Module.Base.extend("Base", {
+		// __construct and __destruct are optional.  They are included
+		// in this example for illustration purposes.
+		// If you override __construct or __destruct, don't forget to
+		// call the parent implementation!
+		__construct: function() {
+			this.__parent.__construct.call(this);
+		},
+		__destruct: function() {
+			this.__parent.__destruct.call(this);
+		},
+		invoke: function(string) {
+			// your code goes here
+			console.log(string);
+		},
+	});
+
+	var instance = new WrapperClass;
+	console.log(instance);
+	instance.invoke('extend example');
+  </script>
+</html>
