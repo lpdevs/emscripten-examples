@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+  <script src="abstract_class.js"></script>
+  
+  <script>
+	console.log('From abstract.js');
+	
+	var DerivedClass = Module.Interface.extend("Interface", {
+		// __construct and __destruct are optional.  They are included
+		// in this example for illustration purposes.
+		// If you override __construct or __destruct, don't forget to
+		// call the parent implementation!
+		__construct: function() {
+			this.__parent.__construct.call(this);
+		},
+		__destruct: function() {
+			this.__parent.__destruct.call(this);
+		},
+		invoke: function(string) {
+			// your code goes here
+			console.log(string);
+		},
+	});
+
+	var instance = new DerivedClass;
+	console.log(instance);
+	instance.invoke('extend example');
+	
+	var x = {
+		invoke: function(str) {
+			console.log('implement invoking with: ' + str);
+		}
+	};
+	var interfaceObject = Module.Interface.implement(x);
+	console.log(interfaceObject);
+	interfaceObject.invoke('implement example');
+  </script>
+</html>
