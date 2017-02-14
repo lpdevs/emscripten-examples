@@ -4,4 +4,5 @@
   
 ### Test
  
-  * Assumming that output file after building is abstract_class.js
+  * Assumming that output file after building is **abstract_class.js**
+  * Open **index.html** on browser, then check the result.
